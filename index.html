@@ -9,13 +9,23 @@
     <h1>Gardine Farming App</h1>
     <p>See console...</p>
     <script>
-        // Using forEach
-        const crops = ['corn', 'tomato', 'potato', 'lettuce', 'cabbage', 'carrot'];
+        // // Using forEach
+        // const crops = ['corn', 'tomato', 'potato', 'lettuce', 'cabbage', 'carrot'];
 
-        crops.forEach(function(crop) {
-            console.log(crop); // prints each crop in order
-            console.log(crops.length); // shows total number of crops
-        });
+        // crops.forEach(function(crop) {
+        //     console.log(crop); // prints each crop in order
+        //     console.log(crops.length); // shows total number of crops
+        // });
+
+        // Using filter
+        const crops = [{name: 'corn', type: 'vegetable'}, {name: 'tomato', type: 'produce'}, {name: 'potato', type: 'vegetable'}, {name: 'lettuce', type: 'produce'}, {name: 'cabbage', type: 'produce'}, {name: 'carrot', type: 'vegetable'}];
+
+        // filter only produce using .filter:
+        function filterByType(type) {
+            return crops.filter(crop => crop.type === type);
+        }
+
+        console.log(filterByType('produce'));
     </script>
 </body>
 </html>

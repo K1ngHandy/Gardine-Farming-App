@@ -26,6 +26,16 @@
         }
 
         console.log(filterByType('produce'));
+
+        // Using map
+        const cart = [{name: 'tomato', count: 5}, {name: 'lettuce', count: 2}, {name: 'cabbage', count: 3}];
+
+        let addToCart = cart.map(item => {
+            item.count++; // adds 1 to each count of the crop in cart
+            return item; // returns corresponding item in new array
+        });
+
+        console.log(addToCart); // prints [{name: 'tomato', count: 6}, {name: 'lettuce', count: 3}, {name: 'cabbage', count: 4}]
     </script>
 </body>
 </html>
